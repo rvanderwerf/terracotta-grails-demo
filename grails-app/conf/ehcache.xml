@@ -1,0 +1,60 @@
+<ehcache
+        name="EventCache">
+    <defaultCache
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </defaultCache>
+    <cache
+            name="org.hibernate.cache.UpdateTimestampsCache"
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </cache>
+    <cache
+            name="org.hibernate.cache.StandardQueryCache"
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </cache>
+
+
+    <cache
+            name="pirateCache"
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </cache>
+    <cache
+            name="pirateCache1"
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </cache>
+    <cache
+            name="pirateCache2"
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </cache>
+    <terracottaConfig url="/opt/terracotta-3.4.1/tc-config.xml"/>
+
+</ehcache>

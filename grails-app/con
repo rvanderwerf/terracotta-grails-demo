@@ -1,0 +1,80 @@
+<ehcache
+        name="EventCache">
+    <defaultCache
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </defaultCache>
+    <cache
+            name="org.hibernate.cache.UpdateTimestampsCache"
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </cache>
+    <cache
+            name="org.hibernate.cache.StandardQueryCache"
+            eternal="false"
+            maxElementsInMemory="10"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120">
+        <terracotta>
+        </terracotta>
+    </cache>
+    <cache name="weceem.gspCache"
+           maxElementsInMemory="5000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="3600"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <cache name="weceem.contentTreeFingerprintCache"
+           maxElementsInMemory="5000"
+           eternal="true"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <cache name="weceem.contentFingerprintCache"
+           maxElementsInMemory="5000"
+           eternal="true"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <cache name="weceem.uriToContentCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="3600"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <cache name="weceem.contentCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="3600"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <cache name="weceem.dataFeeds"
+           maxElementsInMemory="100"
+           eternal="false"
+           timeToIdleSeconds="60"
+           timeToLiveSeconds="60"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <!-- For immutable constants/pre-prepared data only -->
+    <cache name="weceem.eternalCache"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="false"/>
+    <terracottaConfig url="/opt/terracotta-3.4.1/tc-config.xml"/>
+
+</ehcache>
