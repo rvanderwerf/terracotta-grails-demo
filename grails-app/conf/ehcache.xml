@@ -55,6 +55,6 @@
         <terracotta>
         </terracotta>
     </cache>
-    <terracottaConfig url="/opt/terracotta-3.4.1/tc-config.xml"/>
+    <terracottaConfig url="/opt/bigmemory-max-4.1.3/server/wrapper/conf/tc-config.xml"/>
 
 </ehcache>

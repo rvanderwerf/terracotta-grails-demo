@@ -1,10 +1,11 @@
 package com.test.company
 
+import org.springframework.cache.annotation.Cacheable
 import org.springframework.dao.DataIntegrityViolationException
 import com.test.TcDemoService
-import grails.plugin.springcache.annotations.Cacheable
 
-//@Cacheable("pirateCache1")
+
+@Cacheable("pirateCache1")
 class TestController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -48,7 +49,7 @@ class TestController {
 
         [testInstance: testInstance]
     }*/
-    @Cacheable("pirateCache2")
+    //@Cacheable("pirateCache2")
     def show =  {
         def testInstance = Test.get(params.id)
         if (!testInstance) {
