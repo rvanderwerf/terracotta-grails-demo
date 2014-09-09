@@ -14,6 +14,7 @@ class StatusController {
         status.put("currentNode",clusterInfo.currentNode)
         status.put("nodeList",clusterInfo.nodes)
         status.put("topology",clusterInfo.dsoCluster.topology)
+        status.put("clusterState",clusterInfo.dsoCluster.clusterMetaDataManager.state.name)
         return [status:status]
 
     }
